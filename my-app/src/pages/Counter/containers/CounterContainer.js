@@ -5,35 +5,39 @@ class CounterLayout extends Component {
 
   constructor(props) {
     super(props);
-        this.countValue = 0;
-        this.odd = 'even';
+        this.state = {
+          countValue: 0,
+          parityType: 'even',
+        }
+        /* this.countValue = 0;
+        this.parityType = 'even'; */
     }
 
-    up = () => {
-      this.setState({countValue: this.countValue += 1});
-      this.even();
+    handleIncrement = () => {
+      this.setState({countValue: this.state.countValue += 1});
+      this.updateParityType();
     }
-    down = () => {
-      if(this.countValue !== 0) {
-        this.setState({countValue: this.countValue -= 1});
+    handleDecrement = () => {
+      if(this.state.countValue !== 0) {
+        this.setState({countValue: this.state.countValue -= 1});
       }
-      this.even();
+      this.updateParityType();
     }
-    reset = () => {
-      this.setState({countValue: this.countValue = 0});
-      this.even();
+    handleReset = () => {
+      this.setState({countValue: this.state.countValue = 0});
+      this.updateParityType();
     }
-    even = () => {
-      if(this.countValue % 2 === 0) {
-        this.setState({odd: this.odd = 'even'})
+    updateParityType = () => {
+      if(this.state.countValue % 2 === 0) {
+        this.setState({odd: this.state.parityType = 'even'})
       } else {
-        this.setState({odd: this.odd = 'odd'})
+        this.setState({odd: this.state.parityType = 'odd'})
       }
     }
 
   render() {
   return (
-  <Counter countValue = {this.countValue} odd = {this.odd} up = {this.up} down = {this.down} reset = {this.reset} even = {this.even}/>
+  <Counter countValue = {this.state.countValue} parityType = {this.state.parityType} handleIncrement = {this.handleIncrement} handleDecrement = {this.handleDecrement} handleReset = {this.handleReset}/>
   );
 }
 }

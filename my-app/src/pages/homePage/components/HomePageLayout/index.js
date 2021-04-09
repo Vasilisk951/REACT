@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
 const HomePageLayout = ({userList}) => {
   return (
@@ -11,7 +12,7 @@ const HomePageLayout = ({userList}) => {
         )
       })}
       <div>
-        <a href="/counter">counter</a>
+      <Link to="/counter">Counter</Link>
         </div>
     </div>
   )

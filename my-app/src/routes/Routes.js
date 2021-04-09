@@ -9,7 +9,7 @@ const Routes = () => {
     return (
         <Switch>
             <Route exact path={ROUTES.HOME_PAGE} component={HomePageContainer} />
-            <Route exact path={ROUTES.COUNTER} component={CounterLayout} />
+            <Route exact path={ROUTES.COUNTER_PAGE} component={CounterLayout} />
         </Switch>
     )
 }

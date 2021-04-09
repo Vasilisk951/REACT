@@ -1,4 +1,4 @@
 export default {
     HOME_PAGE: '/',
-    COUNTER: '/counter',
+    COUNTER_PAGE: '/counter',
 }
