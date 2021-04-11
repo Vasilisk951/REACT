@@ -9,8 +9,6 @@ class CounterLayout extends Component {
           countValue: 0,
           parityType: 'even',
         }
-        /* this.countValue = 0;
-        this.parityType = 'even'; */
     }
 
     handleIncrement = () => {

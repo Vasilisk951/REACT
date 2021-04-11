@@ -1,5 +1,7 @@
 import React from 'react';
 import './index.css'
+import PropTypes from 'prop-types';
+
 
 import {Link} from "react-router-dom";
 
@@ -16,6 +18,14 @@ const Counter = ({handleIncrement, handleDecrement, handleReset, countValue, par
        <Link to="/">Home</Link>
     </div>
  )
+};
+
+Counter.propTypes = {
+   countValue: PropTypes.number.isRequired,
+   parityType: PropTypes.string.isRequired,
+   handleDecrement: PropTypes.func.isRequired,
+   handleIncrement: PropTypes.func.isRequired,
+   handleReset: PropTypes.func.isRequired,
 };
 
 export default Counter;
