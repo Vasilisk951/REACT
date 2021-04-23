@@ -1,6 +1,8 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 
+import "bootstrap/dist/css/bootstrap.min.css"
+
 const HomePageLayout = ({userList}) => {
   return (
     <div className="userCard">
@@ -12,7 +14,10 @@ const HomePageLayout = ({userList}) => {
         )
       })}
       <div>
-      <Link to="/counter">Counter</Link>
+      <Link className='btn btn-link' to="/counter">Counter</Link>
+      <Link className='btn btn-link' to="/counters">Counters Manager</Link>
+      <Link className='btn btn-link' to="/todolist">TODO LIST</Link>
+
         </div>
     </div>
   )
