@@ -1,6 +1,6 @@
 //reducer занимается обработкой actions
 import { handleActions } from 'redux-actions';
-import * as actions from '../actions'
+import * as actions from '../actions';
 
 const initialState = {
     counters: [],
@@ -36,15 +36,15 @@ const counterManagerReducer = handleActions({
             counters: updatedState
         }
     },
-    [actions.INCREMENT_COUNTER]: (state, {payload}) => {
+    [actions.INCREMENT_COUNTER]: (state, { payload }) => {
         const stateCopy = [...state.counters];
         stateCopy[payload].countValue = stateCopy[payload].countValue + 1;
         return {
             ...state,
-            counters:stateCopy
+            counters: stateCopy
         }
     },
-    [actions.DECREMENT_COUNTER]: (state, {payload}) => {
+    [actions.DECREMENT_COUNTER]: (state, { payload }) => {
         const stateCopy = [...state.counters];
         if (stateCopy[payload].countValue > 0) {
             stateCopy[payload].countValue = stateCopy[payload].countValue - 1;
@@ -57,7 +57,7 @@ const counterManagerReducer = handleActions({
             ...state
         }
     },
-    [actions.RESET_VALUE_COUNTER]: (state, {payload}) => {
+    [actions.RESET_VALUE_COUNTER]: (state, { payload }) => {
         const stateCopy = [...state.counters];
         stateCopy[payload].countValue = 0;
         return {
