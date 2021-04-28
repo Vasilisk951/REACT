@@ -20,8 +20,8 @@ const FormPageContainer = () => {
         dispatch(HANDLE_AREA_CHANGE(event));
     }, [dispatch]);
 
-    const handleAreaSubmit = useCallback((event) => {
-        dispatch(HANDLE_AREA_SUBMIT(event))
+    const handleAreaSubmit = useCallback(() => {
+        dispatch(HANDLE_AREA_SUBMIT())
     }, [dispatch]);
 
     const handleRemoveOpenModal = useCallback((index) => {
@@ -164,8 +164,8 @@ const FormPageContainer = () => {
             //removeTODOItem={handleRemoveTODOListItem}
             //editTODOListItem={handleEditTODOListItem}
             modalClass={TODOState.TODORemove}
-        //handleRemoveOpenModal={handleRemoveOpenModal}
-        //handleCloseModal={handleCloseModal}
+        handleRemoveOpenModal={handleRemoveOpenModal}
+        handleCloseModal={handleCloseModal}
         />
     )
  */

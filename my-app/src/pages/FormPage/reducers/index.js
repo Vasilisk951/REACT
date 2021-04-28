@@ -33,7 +33,8 @@ const formPageContainerReducer = handleActions({
             stateCopy
         };
     },
-    [actions.HANDLE_AREA_SUBMIT]: (state) => {
+    [actions.HANDLE_AREA_SUBMIT]: (state, event) => {
+
         if (state.initialState.TODOItem.TODOValue) {
             const stateCopy = state;
             stateCopy.initialState.TODOList[stateCopy.initialState.TODOItem.index] = stateCopy.initialState.areaValue;
@@ -94,6 +95,8 @@ const formPageContainerReducer = handleActions({
         stateCopy.initialState.TODOItem.TODOValue = stateCopy.initialState.TODOList[index.payload];
         stateCopy.initialState.TODOItem.index = index.payload;
         stateCopy.initialState.areaValue = stateCopy.initialState.TODOItem.TODOValue;
+        window.scrollTo(0, 0);
+
         return {
             ...state,
             stateCopy
