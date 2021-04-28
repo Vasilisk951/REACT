@@ -1,0 +1,50 @@
+.todoList {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+}
+.todoList__form {
+  display: flex;
+  flex-direction: column;
+}
+.todoList__form .MuiFormControl-root {
+  margin-bottom: 15px;
+}
+#outlined-multiline-static {
+  margin-bottom: 0;
+}
+.todoList__components {
+}
+.todoList__item {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  box-sizing: border-box;
+  border: 1px blue solid;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+.todoList__item div:first-child {
+  text-align: end;
+  margin-bottom: 10px;
+}
+.modal-active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal__fon {
+  background-color: #8080803d;
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.modal__content {
+  z-index: 3;
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
