@@ -14,16 +14,6 @@ const initialState = {
     }
 };
 
-/* const resetAreaValue = (state) => {
-    const stateCopy = state;
-    stateCopy.areaValue = '';
-    console.log(stateCopy)
-    return {
-        ...state,
-        stateCopy
-    }
-} */
-
 const formPageContainerReducer = handleActions({
     [actions.HANDLE_AREA_CHANGE]: (state, event) => {
         const stateCopy = state;
