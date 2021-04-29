@@ -1,0 +1,12 @@
+.counder {
+    max-width: 200px;
+    border: 1px solid tomato;
+    margin: 0 auto;
+}
+.counter-display {
+    padding: 20px;
+    text-align: center;
+}
+.counter-btn {
+    width: 33.333%;
+}
